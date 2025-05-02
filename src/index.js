@@ -5,24 +5,20 @@ import getAllContacts from './scripts/getAllContacts.js';
 import removeAllContacts from './scripts/removeAllContacts.js';
 import removeLastContact from './scripts/removeLastContact.js';
 
-// Приклад виклику функцій:
+const run = async () => {
+  await generateContacts(5);
 
-// Генерація 5 нових контактів
-generateContacts(5);
+  await addOneContact();
 
-// Додавання одного нового контакту
-addOneContact();
+  const allContacts = await getAllContacts();
+  console.log(allContacts);
 
-// Отримання і виведення всіх контактів
-const allContacts = getAllContacts();
-console.log(allContacts);
+  const totalContacts = await countContacts();
+  console.log(`Загальна кількість контактів: ${totalContacts}`);
 
-// Отримання кількості контактів
-const totalContacts = countContacts();
-console.log(`Загальна кількість контактів: ${totalContacts}`);
+  await removeLastContact();
 
-// Видалення останнього контакту
-removeLastContact();
+  await removeAllContacts();
+};
 
-// Видалення всіх контактів
-removeAllContacts();
+run();
