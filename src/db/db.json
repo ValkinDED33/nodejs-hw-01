@@ -1,1 +1,37 @@
-[]
+[
+  {
+    "id": "72a754f4-0536-4fe6-888d-554e7ae68f07",
+    "name": "Clifton Simonis Sr.",
+    "phone": "396-413-2320 x8879",
+    "email": "Celestino.VonRueden24@hotmail.com",
+    "job": "Dynamic Metrics Technician"
+  },
+  {
+    "id": "b2b20c6e-48ce-4801-a21e-97e0fd1a98b8",
+    "name": "Sharon Green",
+    "phone": "1-542-257-4786 x36784",
+    "email": "Hilma.Ankunding64@gmail.com",
+    "job": "Human Marketing Administrator"
+  },
+  {
+    "id": "38b5e8e5-ba06-430b-9d49-138a5d58287f",
+    "name": "Dr. Nina Pfannerstill II",
+    "phone": "613.735.3494 x701",
+    "email": "Lester_Anderson@yahoo.com",
+    "job": "National Paradigm Associate"
+  },
+  {
+    "id": "2238e365-4b42-4bcf-ab55-84d0a7624f73",
+    "name": "Mr. Todd Kozey",
+    "phone": "1-325-305-2855 x5759",
+    "email": "Margret_Nitzsche@yahoo.com",
+    "job": "Customer Metrics Director"
+  },
+  {
+    "id": "d3917aa0-24c1-4e4c-bdfa-132c0a568bde",
+    "name": "Estelle Gibson PhD",
+    "phone": "1-806-733-2699 x771",
+    "email": "Rickey_Lind@gmail.com",
+    "job": "Customer Research Developer"
+  }
+]

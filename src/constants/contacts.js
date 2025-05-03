@@ -1,9 +1,15 @@
 import path from 'path';
 
-// Получаем путь к текущему модулю
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+// Указываем правильный путь
+const PATH_DB = path.join(
+  'D:',
+  'GO_IT',
+  'nodejs',
+  'nodejs-hw-01',
+  'src',
+  'db',
+  'db.json',
+);
 
-// Генерируем правильный путь к db.json
-const PATH_DB = path.resolve(__dirname, '../db/db.json'); // Убедитесь, что путь строится верно
-
+// Экспортируем для использования в других файлах
 export { PATH_DB };
