@@ -1,22 +1,21 @@
 import { readFile } from 'fs/promises';
-import path from 'path';
-
-const PATH_DB = path.join(
-  'D:',
-  'GO_IT',
-  'nodejs',
-  'nodejs-hw-01',
-  'src',
-  'db',
-  'db.json',
-);
+import { PATH_DB } from '..//constants/contacts.js';
 
 const readContacts = async () => {
   try {
+    console.log('Шлях до файлу:', PATH_DB);
+
     const data = await readFile(PATH_DB, 'utf-8');
-    return JSON.parse(data);
+    const trimmed = data.trim();
+
+    if (!trimmed) {
+      console.warn('Файл порожній або містить лише пробіли');
+      return [];
+    }
+
+    return JSON.parse(trimmed);
   } catch (error) {
-    console.error('Ошибка чтения файла:', error);
+    console.error('Помилка читання файлу:', error.message);
     return [];
   }
 };

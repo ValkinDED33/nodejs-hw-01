@@ -1,23 +1,22 @@
 import { writeFile } from 'fs/promises';
-import path from 'path';
+import { PATH_DB } from '../constants/contacts.js';
 
-const PATH_DB = path.join(
-  'D:',
-  'GO_IT',
-  'nodejs',
-  'nodejs-hw-01',
-  'src',
-  'db',
-  'db.json',
-);
-
+/**
+ * Записує контакти у файл.
+ * @param {Array} contacts Масив контактів для збереження.
+ */
 const writeContacts = async (contacts) => {
+  if (!Array.isArray(contacts)) {
+    console.error('Помилка: contacts повинні бути масивом.');
+    return;
+  }
+
   try {
     const data = JSON.stringify(contacts, null, 2);
     await writeFile(PATH_DB, data, 'utf-8');
-    console.log('Данные успешно записаны в файл');
+    console.log('✅ Контакти успішно збережено.');
   } catch (error) {
-    console.error('Ошибка записи в файл:', error);
+    console.error('❌ Помилка запису файлу:', error.message);
   }
 };
 
